@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('Picture/aerialview.jpg'); /* Ensure this path is correct */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 100px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensures nav stays on top */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh; /* Adjust height as needed */
+    text-align: center;
+    margin-top: 60px; /* Ensure spacing below the fixed nav */
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 48px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    margin: 0;
+    position: absolute;
+    top: 20%; /* Adjust the position of the h1 element */
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    margin-top: 70vh; /* Adjust margin-top to match the height of the hero section */
+    background: rgba(0, 0, 0, 0.8);
+}
+
+article {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+article h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffcc00;
+}
+
+article p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        height: 50vh; /* Adjusted height for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        top: 30%; /* Adjust the position of the h1 element for smaller screens */
+    }
+
+    main {
+        margin-top: 50vh; /* Adjust margin-top for smaller screens */
+    }
+}

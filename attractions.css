@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('Image/4-Leaning-Tower-of-Teluk-Intan.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Default text color for readability */
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+    padding: 20px; 
+    text-align: center;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    margin-top: 70px; 
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+article {
+    font-size: large;
+    color: #fff; /* Ensure text is white for contrast */
+    padding: 20px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    border-radius: 5px; 
+    margin: 20px auto; /* Center article with margin */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensure images fit in smaller viewports */
+}
+
+.showcase img {
+    width: 30%;
+    max-height: 300px; 
+    object-fit: cover; 
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    article {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .showcase img {
+        width: 80%;
+    }
+}
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
